@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
                 <p>All Inclusive</p>
                 <h1 className='font-bold text-5xl md:text-7xl drop-shadow-2xl'>Get Your Body Nutrition NOW</h1>
                 <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid distinctio reprehenderit dolorum voluptates qui, quisquam consequatur obcaecati veniam nisi, delectus aliquam molestiae magni est voluptatum quae doloremque ab. Iure!</p>
-            <button className='bg-white text-black '>Click Here To Start</button>
+            <Link to='/Register' className='bg-white text-black button'>Click Here To Start</Link>
             </div>
         </div>
     </div>
