@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const FormReg = () => {
   return (
@@ -35,12 +36,15 @@ const FormReg = () => {
                     </label>
                     <input type="password"
                         class="w-full px-3 py-2 border shadow rounded block text-small placeholder:text-slate-400 text-primary2 font-semibold focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
-                        id="Password" placeholder="Password confirmation" name="Password" required/>
+                        id="Pass-confirm" placeholder="Password confirmation" name="Pass-confirm" required/>
                 </div>
                 <button type="submit"
-                    class=" px-2 py-2 w-full bg-white text-primary1 rounded-lg hover:bg-slate-400 my-4 button">Sign Up</button>
+                    class=" px-2 py-2 w-full bg-white text-primary1 rounded-lg hover:bg-slate-400 my-4 button shadow-lg">Sign Up</button>
         </form>
-        <p className='text-center'> or </p>
+
+        <div className="flex justify-center my-4 text-blue-500">
+            <Link to='/Login'>Already Have Acount?</Link>
+        </div>
 
     </div>
   )
