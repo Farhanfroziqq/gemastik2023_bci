@@ -1,6 +1,6 @@
 import LandingPage from "./Pages/LandingPage";
 import Register from "./Pages/Register";
-import Login from "./Pages/Register";
+import Login from "./Pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function app(){
@@ -11,8 +11,6 @@ function app(){
 				<Route path="/Register" element={<Register/>}></Route>
 				<Route path="/Login" element={<Login/>}></Route>
 			</Routes>
-
-		
 		</BrowserRouter>
 	</div>
 }
