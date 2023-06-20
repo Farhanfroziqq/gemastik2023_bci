@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import UserProfile from "./components/dashboard/userprofile/UserProfile";
+import User_Input from "./Pages/User_Input";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Route path='/login' element={<Login />} />
 					<Route path='/dashboard' element={<Dashboard />} />
 					<Route path='/dashboard/userprofile' element={<UserProfile />} />
+					<Route path='/Login/Userinput' element={<User_Input/>} />
 				</Routes>
 			</BrowserRouter>
 		</div>
