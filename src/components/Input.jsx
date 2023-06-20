@@ -1,4 +1,5 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
+import Dashboard from '../Pages/Dashboard'
 
 const Input = () => {
   return (
@@ -10,8 +11,7 @@ const Input = () => {
 				<div className='mb-4'>
 					<label
 						htmlFor='user_called'
-						className="block font-semibold mb-1 after:content-['*'] after:text-red-500  after:ml-0.5"
-					>
+						className="block font-semibold mb-1 after:content-['*'] after:text-red-500  after:ml-0.5">
 						Nama
 					</label>
 					<input
@@ -42,7 +42,7 @@ const Input = () => {
                     <label for="user_gender"
                             class="block font-semibold after:content-['*'] after:text-red-500 after:ml-0.5 text-center">
                             Gender
-                            </label>
+                    </label>
                         <select id="user_gender" name="user_gender"
                             class="bg-white border border-gray-300 text-slate-500/60 font-semibold text-small text-center rounded focus:ring-slate-700 focus:border-primary1 block w-24 p-2.5"
                             required>
@@ -68,12 +68,12 @@ const Input = () => {
                         />
                     </div>
                 </div>
-				<button
+				<Link to='/dashboard'
 					type='submit'
-					className=' px-2 py-2 w-full bg-white text-primary1 rounded-lg hover:bg-slate-100 my-4 button shadow-sm'
+					className=' px-2 py-2 w-full bg-white text-center rounded-lg hover:bg-slate-100 my-4 button shadow-sm'
 				>
-					Sign Up
-				</button>
+					Submit
+				</Link>
 			</form>
 
 			<div className='flex justify-center my-4 text-blue-500'>
