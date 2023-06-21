@@ -24,7 +24,7 @@ const FormReg = () => {
 			try {
 				const { confirmPassword, ...dataToPost } = formData;
 				const response = await axios.post(
-					"http://localhost:8000/api/user",
+					"http://localhost:8000/api/user/",
 					dataToPost,
 					{
 						headers: {
