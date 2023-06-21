@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import UserProfile from "./components/dashboard/userprofile/UserProfile";
 import { User, UserDetail } from "./testing";
+import User_Input from "./Pages/User_Input";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route path='/dashboard/userprofile' element={<UserProfile />} />
 					<Route path='/user' element={<User />} />
 					<Route path='/userdetail' element={<UserDetail />} />
+					<Route path='/Login/Userinput' element={<User_Input />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
