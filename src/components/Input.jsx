@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Dashboard from "../Pages/Dashboard";
 
 const Input = () => {
 	return (
