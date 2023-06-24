@@ -1,4 +1,6 @@
-import User from "./User";
+import Users from "./Users";
 import UserDetail from "./UserDetail";
+import LoginTest from "./LoginTest";
+import DashboardTesting from "./DashboardTesting";
 
-export { User, UserDetail };
+export { Users, UserDetail, LoginTest, DashboardTesting };

@@ -4,8 +4,9 @@ import Login from "./Pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import UserProfile from "./components/dashboard/userprofile/UserProfile";
-import { User, UserDetail } from "./testing";
+import { Users, UserDetail, LoginTest } from "./testing";
 import User_Input from "./Pages/User_Input";
+import UserList from "./testing/UserList";
 
 function App() {
 	return (
@@ -17,9 +18,13 @@ function App() {
 					<Route path='/login' element={<Login />} />
 					<Route path='/dashboard' element={<Dashboard />} />
 					<Route path='/dashboard/userprofile' element={<UserProfile />} />
-					<Route path='/user' element={<User />} />
-					<Route path='/userdetail' element={<UserDetail />} />
 					<Route path='/Login/Userinput' element={<User_Input />} />
+
+					{/* Testing Route */}
+					<Route path='/userstesting' element={<Users />} />
+					<Route path='/userdetailtesting' element={<UserDetail />} />
+					<Route path='/logintesting' element={<LoginTest />} />
+					<Route path='/userlisttesting' element={<UserList />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
