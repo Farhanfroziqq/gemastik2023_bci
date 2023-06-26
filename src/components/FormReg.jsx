@@ -77,7 +77,7 @@ const FormReg = () => {
         <div className="w-full h-full bg-black/30 mix-blend-multiply" />
       </div>
       <div className="col-span-2">
-        <div className="flex flex-col w-full lg:w-2/4 border-2 justify-center max-w-[700px] relative border-l-2">
+        <div className="flex flex-col w-full border-2 justify-center max-w-[700px] relative border-l-2">
           <h1 className="font-bold text-4xl px-8 mt-8">Register</h1>
           <p className="font-light px-8 mb-8">
             Fill the account registration form.
