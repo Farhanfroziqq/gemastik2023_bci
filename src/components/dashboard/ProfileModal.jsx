@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineClose, AiOutlineEdit } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import ProfileNav from "./ProfileNav";
 
 const ProfileModal = ({ props }) => {
 	return (
@@ -8,6 +9,10 @@ const ProfileModal = ({ props }) => {
 			<div className='relative flex justify-end'>
 				<AiOutlineClose onClick={props} className='cursor-pointer' size={20} />
 			</div>
+			<div className="">
+				<h3 className="text-3xl font-bold">USER PROFILE</h3>
+			</div>
+			<ProfileNav/>
 			<div className="flex mx-auto mb-8">
 				<div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 items-center justify-between py-4 mx-12">
 					<div className='w-24 h-24 m-auto rounded-full overflow-hidden bg-black hover:bg-slate-900 cursor-pointer'></div>

@@ -1,6 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 const PersonalContact = () => {
+  const [selectedGender, setSelectedGender] = useState("");
+  const [selectedActivity, setSelectedActivity] = useState("");
+  const handleGenderChange = (event) => {
+    setSelectedGender(event.target.value);
+  };
+  const handleActivityChange = (event) => {
+    setSelectedActivity(event.target.value);
+  };
   return (
     <div>
       <form className="">
@@ -260,13 +269,13 @@ const PersonalContact = () => {
               required
             />
           </div>
+          <Link
+            to="/dashboard"
+            type="submit"
+            className="col-span-3 w-full bg-white text-center rounded-lg hover:bg-slate-100 my-4 button shadow-sm">
+            Submit
+          </Link>
         </div>
-        <Link
-          to="/dashboard"
-          type="submit"
-          className=" px-8 py-2 w-full bg-white text-center rounded-lg hover:bg-slate-100 my-4 button shadow-sm">
-          Submit
-        </Link>
       </form>
     </div>
   );

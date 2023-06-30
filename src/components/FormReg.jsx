@@ -86,7 +86,88 @@ const FormReg = () => {
           <p className=" absolute text-red-500 left-[50%] -translate-x-[50%] top-16 text-sm">
             {errors.msg}
           </p>
-          <PersonalContact />
+          <form className="px-8" onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label
+                htmlFor="user_name"
+                className="block font-semibold mb-1 after:content-['*'] after:text-red-500  after:ml-0.5">
+                Username
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border shadow-sm rounded block text-small placeholder:text-slate-400 text-primary2 font-semibold focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+                id="user_name"
+                placeholder="your username"
+                name="user_name"
+                value={formData.user_name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label
+                htmlFor="user_email"
+                className="block font-semibold mb-1 after:content-['*'] after:text-red-500   after:ml-0.5">
+                Email
+              </label>
+              <input
+                type="email"
+                className="w-full px-3 py-2 border shadow-sm  rounded block text-small placeholder:text-slate-400 text-primary2 font-semibold focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+                id="user_email"
+                placeholder="example@gmail.com"
+                value={formData.user_email}
+                onChange={handleChange}
+                name="user_email"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label
+                htmlFor="user_password"
+                className="block font-semibold mb-1 after:content-['*'] after:text-red-500    after:ml-0.5">
+                Password
+              </label>
+              <input
+                type="password"
+                className="w-full px-3 py-2 border shadow-sm rounded block text-small placeholder:text-slate-400 text-primary2 font-semibold focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+                id="user_password"
+                placeholder="Password"
+                value={formData.user_password}
+                onChange={handleChange}
+                name="user_password"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label
+                htmlFor="confirmPassword"
+                className="block font-semibold mb-1 after:content-['*'] after:text-red-500  after:ml-0.5">
+                Password Confirmation
+              </label>
+              <input
+                type="password"
+                className="w-full px-3 py-2 border shadow-sm rounded block text-small placeholder:text-slate-400 text-primary2 font-semibold focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+                id="confirmPassword"
+                placeholder="Password confirmation"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                name="confirmPassword"
+                required
+              />
+            </div>
+            <div className="flex justify-between mt-8 px-2">
+              <div className="text-blue-500 align-middle">
+                <Link to="/login" className="text-sm">
+                  Already Have Acount?
+                </Link>
+              </div>
+              <button
+                type="submit"
+                className="px-4 w-fit bg-blue-500 text-white font-semibold hover:bg-blue-400 button shadow-sm text-sm">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
