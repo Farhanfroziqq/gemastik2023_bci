@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Account from "./Account";
 import Personal from "./Personal";
-
-const Contacts = () => {
-  return <div>Contacts component</div>;
-};
+import Contact from "./Contact";
 
 const Settings = () => {
   return <div>Settings component</div>;
@@ -23,7 +20,7 @@ const ProfileNav = () => {
       case "Personal":
         return <Personal />;
       case "Contacts":
-        return <Contacts />;
+        return <Contact />;
       case "Settings":
         return <Settings />;
       default:
