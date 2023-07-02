@@ -46,6 +46,7 @@ const Dashboard = () => {
 
 			{/* Input Modal */}
 
+			{/* Main Dashboard Content */}
 			<div className='absolute right-[50%] top-[50%] translate-x-[50%] -translate-y-[50%]'>
 				<Status />
 			</div>
