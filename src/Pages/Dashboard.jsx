@@ -10,8 +10,8 @@ const Dashboard = () => {
 	const [profile, setProfile] = useState(false);
 	const [report, setReport] = useState(false);
 	const [mealInput, setMealInput] = useState(false);
-	const mealInputRef = useRef(null);
 
+	const mealInputRef = useRef(null);
 	const handleProfile = () => {
 		setProfile(!profile);
 	};
@@ -21,7 +21,6 @@ const Dashboard = () => {
 	const handleMealInput = () => {
 		setMealInput(!mealInput);
 	};
-
 	useEffect(() => {
 		if (mealInput) {
 			mealInputRef.current.focus();

@@ -14,7 +14,7 @@ const Status = ({ props }) => {
 				<p className='text-red-500 text-2xl text-center my-5'>
 					Not Enough Meal!
 				</p>
-				<div>
+				<div className='w-full h-[20rem] bg-gray-300'>
 					{/* progress bar */}
 					<div>{/* Calories */}</div>
 					<div>{/* Carbohidrate */}</div>
@@ -25,7 +25,7 @@ const Status = ({ props }) => {
 
 			{/* Section 2 */}
 			<div>
-				<h2 className='font-semibold text-lg mb-2'>Meal Input</h2>
+				<h2 className='font-semibold text-lg my-2'>Meal Input</h2>
 				<hr />
 				<div className='py-12 flex items-center justify-center'>
 					<button
