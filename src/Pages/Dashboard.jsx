@@ -4,6 +4,7 @@ import ProfileModal from "../components/dashboard/ProfileModal";
 import UserProfileButton from "../components/dashboard/UserProfileButton";
 import ReportButton from "../components/dashboard/ReportButton";
 import ReportModal from "../components/dashboard/ReportModal";
+import MealInputModal from "../components/dashboard/mealInput/MealInputModal";
 
 const Dashboard = () => {
 	const [profile, setProfile] = useState("");
@@ -58,7 +59,7 @@ const Dashboard = () => {
 					mealInput ? "block" : "hidden "
 				}`}
 			>
-				{/* <MealInputModal props={handleMealInput} */}
+				<MealInputModal props={handleMealInput} />
 			</div>
 
 			{/* Main Dashboard Content */}
