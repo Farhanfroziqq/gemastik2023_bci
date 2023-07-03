@@ -4,7 +4,7 @@ import ProfileNav from "./userprofile/ProfileNav";
 
 const ProfileModal = ({ props }) => {
 	return (
-		<div className='absolute top-[15%]  right-[50%] translate-x-[50%]  border rounded-md shadow-md px-4 py-4 flex flex-col bg-white w-full md:w-1/2'>
+		<div className='absolute top-[10%] right-[50%] translate-x-[50%]  border rounded-md shadow-md px-4 py-4 flex flex-col bg-white w-full md:w-1/2'>
 			<div className='relative flex justify-end'>
 				<AiOutlineClose onClick={props} className='cursor-pointer' size={20} />
 			</div>

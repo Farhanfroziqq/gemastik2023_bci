@@ -8,20 +8,28 @@ import ReportModal from "../components/dashboard/ReportModal";
 const Dashboard = () => {
 	const [profile, setProfile] = useState("");
 	const [report, setReport] = useState("");
+	const [mealInput, setMealInput] = useState("");
+
 	const handleProfile = () => {
 		setProfile(!profile);
 	};
 	const handleReport = () => {
 		setReport(!report);
 	};
+	const handleMealInput = () => {
+		setMealInput(!mealInput);
+	};
 	return (
-		<div className='relative h-screen'>
+		<div className='relative h-screen w-full flex flex-row-reverse justify-between'>
 			{/* Floating User profile and reports button */}
-			<div className='absolute right-[50px] top-[50px] flex items-center flex-col'>
+			<div className='mx-12 my-24 flex items-center flex-col '>
 				<div className='' onClick={handleProfile}>
 					<UserProfileButton />
 				</div>
-				<div onClick={handleReport}>
+				<p className='text-gray-500 text-center mb-6'>
+					Click to update your information!
+				</p>
+				<div onClick={handleReport} className='w-full'>
 					<ReportButton />
 				</div>
 			</div>
@@ -44,11 +52,19 @@ const Dashboard = () => {
 				<ReportModal props={handleReport} />
 			</div>
 
-			{/* Input Modal */}
+			{/* Meal Input Modal */}
+			<div
+				className={`absolute w-full h-screen backdrop-blur-sm z-50 ${
+					mealInput ? "block" : "hidden "
+				}`}
+			>
+				{/* <MealInputModal props={handleMealInput} */}
+			</div>
 
 			{/* Main Dashboard Content */}
-			<div className='absolute right-[50%] top-[50%] translate-x-[50%] -translate-y-[50%]'>
-				<Status />
+			<div className='w-full relative ml-20 my-16 h-fit'>
+				<div className='absolute bg-blue-500 w-4 h-full '></div>
+				<Status props={handleMealInput} />
 			</div>
 		</div>
 	);
