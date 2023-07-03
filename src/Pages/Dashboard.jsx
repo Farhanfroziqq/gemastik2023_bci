@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Status from "../components/dashboard/Status";
 import ProfileModal from "../components/dashboard/ProfileModal";
 import UserProfileButton from "../components/dashboard/UserProfileButton";
@@ -7,9 +7,10 @@ import ReportModal from "../components/dashboard/ReportModal";
 import MealInputModal from "../components/dashboard/mealInput/MealInputModal";
 
 const Dashboard = () => {
-	const [profile, setProfile] = useState("");
-	const [report, setReport] = useState("");
-	const [mealInput, setMealInput] = useState("");
+	const [profile, setProfile] = useState(false);
+	const [report, setReport] = useState(false);
+	const [mealInput, setMealInput] = useState(false);
+	const mealInputRef = useRef(null);
 
 	const handleProfile = () => {
 		setProfile(!profile);
@@ -20,6 +21,13 @@ const Dashboard = () => {
 	const handleMealInput = () => {
 		setMealInput(!mealInput);
 	};
+
+	useEffect(() => {
+		if (mealInput) {
+			mealInputRef.current.focus();
+		}
+	}, [mealInput]);
+
 	return (
 		<div className='relative h-screen w-full flex flex-row-reverse justify-between'>
 			{/* Floating User profile and reports button */}
@@ -59,7 +67,7 @@ const Dashboard = () => {
 					mealInput ? "block" : "hidden "
 				}`}
 			>
-				<MealInputModal props={handleMealInput} />
+				<MealInputModal props={handleMealInput} inputRef={mealInputRef} />
 			</div>
 
 			{/* Main Dashboard Content */}

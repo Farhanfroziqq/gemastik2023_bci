@@ -4,10 +4,14 @@
 
 * {
 	font-family: poppins;
+	box-sizing: border-box;
 }
 
 @layer base {
 	.button {
 		@apply border py-2 px-3 rounded-full;
+	}
+	input[type="number"]::-webkit-inner-spin-button {
+		opacity: 1;
 	}
 }
