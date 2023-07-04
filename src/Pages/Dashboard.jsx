@@ -5,6 +5,7 @@ import UserProfileButton from "../components/dashboard/UserProfileButton";
 import ReportButton from "../components/dashboard/ReportButton";
 import ReportModal from "../components/dashboard/ReportModal";
 import MealInputModal from "../components/dashboard/mealInput/MealInputModal";
+import ProgressBar from "../components/dashboard/ProgressBar";
 
 const Dashboard = () => {
 	const [profile, setProfile] = useState(false);
