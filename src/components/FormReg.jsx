@@ -6,21 +6,19 @@ import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 
 const FormReg = () => {
 	return (
-		<div className='w-full max-w-[1000px] grid border grid-cols-3 rounded-md overflow-hidden shadow-md'>
-			<div className="overflow-hidden bg-[url('/img/1.jpg')] h-full bg-right bg-cover rounded-l-md hidden md:block">
+		<div className='w-full max-w-[1000px] min-h-[60vh] grid border grid-cols-3 rounded-md overflow-hidden shadow-md'>
+			<div className="overflow-hidden bg-[url('/img/3.jpg')] h-full bg-right bg-cover rounded-l-md hidden md:block">
 				<div className='w-full h-full bg-black/30 mix-blend-multiply' />
 			</div>
 			<div className='col-span-3 md:col-span-2'>
 				<div className='flex flex-col w-full justify-center relative'>
 					<h1 className='font-semibold text-5xl px-8 mt-8 mb-2'>Register</h1>
-					<p className='font-light px-8 mb-8'>
-						Fill the account registration form.
-					</p>
+					<p className='px-8 mb-8'>Fill the account registration form.</p>
 					<form className='px-8'>
 						<div className='mb-5 '>
 							<label
 								htmlFor='user_name'
-								className="block font-semibold mb-1 after:content-['*'] after:text-red-500 uppercase text-sm text-[#636363] after:ml-0.5"
+								className="block font-semibold mb-1 after:content-['*'] after:text-red-500 uppercase text-[13px] text-[#636363] after:ml-0.5"
 							>
 								Username
 							</label>
@@ -41,7 +39,7 @@ const FormReg = () => {
 						<div className='mb-5'>
 							<label
 								htmlFor='user_email'
-								className="block font-semibold mb-1 after:content-['*'] after:text-red-500 text-[#636363] uppercase text-sm after:ml-0.5"
+								className="block font-semibold mb-1 after:content-['*'] after:text-red-500 text-[#636363] uppercase text-[13px] after:ml-0.5"
 							>
 								Email
 							</label>
@@ -51,7 +49,7 @@ const FormReg = () => {
 								</span>
 								<input
 									type='email'
-									className='w-full px-14 py-2 border  rounded block  text-primary2  bg-transparent focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer'
+									className='w-full px-14 py-2 border  rounded block  text-primary2  bg-transparent  focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer'
 									id='user_email'
 									placeholder='user@example.com'
 									name='user_email'
@@ -62,7 +60,7 @@ const FormReg = () => {
 						<div className='mb-5'>
 							<label
 								htmlFor='user_password'
-								className="block font-semibold mb-1 after:content-['*'] after:text-red-500  uppercase text-sm text-[#636363] after:ml-0.5"
+								className="block font-semibold mb-1 after:content-['*'] after:text-red-500  uppercase text-[13px] text-[#636363] after:ml-0.5"
 							>
 								Password
 							</label>
@@ -83,7 +81,7 @@ const FormReg = () => {
 						<div className='mb-5'>
 							<label
 								htmlFor='confirmPassword'
-								className="block font-semibold mb-1 after:content-['*'] after:text-red-500 text-[#636363] uppercase text-[13px] after:ml-0.5"
+								className='block font-semibold mb-1 text-[#636363] uppercase text-[13px] after:ml-0.5'
 							>
 								Verify password
 							</label>
