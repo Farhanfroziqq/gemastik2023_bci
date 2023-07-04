@@ -6,7 +6,7 @@ import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 
 const FormReg = () => {
 	return (
-		<div className='w-full max-w-[1000px] h-[60vh] grid border grid-cols-3 rounded-md overflow-hidden shadow-md'>
+		<div className='w-full max-w-[1000px] grid border grid-cols-3 rounded-md overflow-hidden shadow-md'>
 			<div className="overflow-hidden bg-[url('/img/1.jpg')] h-full bg-right bg-cover rounded-l-md hidden md:block">
 				<div className='w-full h-full bg-black/30 mix-blend-multiply' />
 			</div>
@@ -16,9 +16,6 @@ const FormReg = () => {
 					<p className='font-light px-8 mb-8'>
 						Fill the account registration form.
 					</p>
-					{/* <p className=' absolute text-red-500 left-[50%] -translate-x-[50%] top-16 text-sm'>
-						{errors.msg}
-					</p> */}
 					<form className='px-8'>
 						<div className='mb-5 '>
 							<label
