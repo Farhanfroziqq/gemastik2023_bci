@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { FiTrash2 } from "react-icons/fi";
-import data from "../../../assets/data";
+import meals from "../../../assets/meals";
 
 const MealInputModal = ({ props, inputRef }) => {
 	const [inputValue, setInputValue] = useState("");
@@ -13,15 +13,24 @@ const MealInputModal = ({ props, inputRef }) => {
 		setSearchInterface(e.target.value !== "");
 	};
 
-	const filteredMeals = data.filter(
+	const filteredMeals = meals.filter(
 		(m) =>
 			m.meal_name &&
 			m.meal_name.toLowerCase().includes(inputValue.toLowerCase())
 	);
 
 	const addToCart = (meal) => {
-		console.log(meal);
-		setCartItems((prevItems) => [...prevItems, meal]);
+		const { meal_count, ...rest } = meal;
+		const multipliedMeal = {
+			...rest,
+			meal_calories: meal.meal_calories * meal_count,
+			meal_carbs: meal.meal_carbs * meal_count,
+			meal_protein: meal.meal_protein * meal_count,
+			meal_fat: meal.meal_fat * meal_count,
+			meal_count: meal_count,
+		};
+
+		setCartItems((prevItems) => [...prevItems, multipliedMeal]);
 		setSearchInterface(!setSearchInterface);
 		setInputValue("");
 	};

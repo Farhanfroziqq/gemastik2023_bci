@@ -1,4 +1,4 @@
-const data = [
+const meals = [
 	{
 		meal_id: 1,
 		meal_name: "Boiled Egg",
@@ -25,4 +25,4 @@ const data = [
 	},
 ];
 
-export default data;
+export default meals;

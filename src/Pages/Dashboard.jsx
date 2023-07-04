@@ -28,7 +28,7 @@ const Dashboard = () => {
 	}, [mealInput]);
 
 	return (
-		<div className='relative h-screen w-full flex flex-row-reverse justify-between'>
+		<div className='relative overflow-hidden w-full flex flex-row-reverse justify-between'>
 			{/* Floating User profile and reports button */}
 			<div className='mx-12 my-24 flex items-center flex-col '>
 				<div className='' onClick={handleProfile}>

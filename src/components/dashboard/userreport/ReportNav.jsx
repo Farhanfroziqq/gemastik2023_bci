@@ -22,27 +22,29 @@ const ReportNav = () => {
 	const Navbar = () => {
 		return (
 			<div>
-				<div className='flex my-4'>
+				<div className='flex'>
 					<button
-						className={`mr-8 ${activeLink === "History" ? "font-bold" : ""}`}
+						className={`mr-8 ${
+							activeLink === "History" ? "font-semibold" : ""
+						}`}
 						onClick={() => handleLinkClick("History")}
 					>
 						History
 					</button>
 					<button
-						className={`mr-8 ${activeLink === "Graph" ? "font-bold" : ""}`}
+						className={`mr-8 ${activeLink === "Graph" ? "font-semibold" : ""}`}
 						onClick={() => handleLinkClick("Graph")}
 					>
 						Graph
 					</button>
 				</div>
-				<hr className='flex-grow border-gray-300 border-1 mb-8' />
+				<hr className='flex-grow border-1 my-2 mb-8' />
 			</div>
 		);
 	};
 
 	return (
-		<div>
+		<div className='overflow-hidden overflow-y-auto'>
 			<Navbar />
 			{renderComponent()}
 		</div>
