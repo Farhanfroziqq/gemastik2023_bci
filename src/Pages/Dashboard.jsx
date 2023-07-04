@@ -23,7 +23,13 @@ const Dashboard = () => {
 
   const handleReport = () => {
     setReport(!report);
+    if (!report) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
   };
+
   const handleMealInput = () => {
     setMealInput(!mealInput);
     if (!mealInput) {
