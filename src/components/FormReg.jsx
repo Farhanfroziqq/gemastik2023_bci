@@ -99,7 +99,7 @@ const FormReg = () => {
 								/>
 							</div>
 						</div>
-						<div className='flex items-center justify-between mt-8 px-2'>
+						<div className='flex items-center justify-between mt-8'>
 							<div className='text-blue-500 font-semibold align-middle'>
 								<Link to='/login' className=''>
 									Already Have Acount?

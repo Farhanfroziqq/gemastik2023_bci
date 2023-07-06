@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
 	return (
-		<div className='w-full h-screen'>
+		<div className='w-full h-screen snap-center'>
 			<img
 				className='top-0 left-0 w-full h-screen object-cover'
 				src='/img/1.jpg'

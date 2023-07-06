@@ -6,13 +6,15 @@ import Plan from "../components/Plan";
 import Footer from "../components/Footer";
 
 function LandingPage() {
-	return <div>
-		<Navbar/>
-		<Hero/>
-		<Offers/>
-		<Plan/>
-		<Rooms/>
-		<Footer/>
-	</div>;
+	return (
+		<div>
+			<Navbar />
+			<Hero />
+			<Offers />
+			<Plan />
+			<Rooms />
+			<Footer />
+		</div>
+	);
 }
 export default LandingPage;

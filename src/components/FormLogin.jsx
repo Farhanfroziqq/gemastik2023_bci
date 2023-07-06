@@ -58,14 +58,14 @@ const FormLogin = () => {
 							Forget Password?
 						</Link>
 					</form>
-					<div className='flex justify-between mx-8 py-4 mb-2 text-blue-500 font-semibold items-center align-middle'>
+					<div className='flex justify-between mx-8 mb-2 text-blue-500 font-semibold items-center align-middle'>
 						<Link to='/register'>Create new account</Link>
 						<Link
 							type='submit'
 							className='px-4 w-32 text-center bg-blue-500 text-white font-semibold hover:bg-blue-400 button'
 							to='/dashboard'
 						>
-							Sign Up
+							Login
 						</Link>
 					</div>
 				</div>
