@@ -3,8 +3,8 @@ import Input from "../components/Input";
 
 const User_Input = () => {
 	return (
-		<div className='flex flex-col px-4  justify-center'>
-			<div className='absolute top-16 left-20 lg:mx-40 xl:mx-56'>
+		<div className='flex flex-col px-4  lg:h-screen justify-center'>
+			<div className='my-4 lg:mx-40 xl:mx-56'>
 				<BackButton />
 			</div>
 			<div className='flex justify-center md:items-center'>

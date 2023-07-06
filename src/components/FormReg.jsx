@@ -108,7 +108,7 @@ const FormReg = () => {
 							<Link
 								type='submit'
 								className='px-4 w-32 text-center bg-blue-500 text-white font-semibold hover:bg-blue-400 button '
-								to='/dashboard'
+								to='/Login/Userinput'
 							>
 								Submit
 							</Link>

@@ -25,12 +25,6 @@ const Graph = () => {
 				borderColor: "red",
 				borderWidth: 2,
 			},
-			{
-				label: "Calories",
-				data: history.map((data) => data.total_calories),
-				borderColor: "orange",
-				borderWidth: 2,
-			},
 		],
 	});
 

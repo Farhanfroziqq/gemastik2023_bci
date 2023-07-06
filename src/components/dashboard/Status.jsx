@@ -8,21 +8,15 @@ const Status = ({ props }) => {
 			<h1 className='text-5xl font-semibold my-12'>Dashboard</h1>
 
 			{/* Section 1 */}
-			<div>
+			<div className='mb-5'>
 				<h2 className='text-lg font-semibold'>Nutrition Status</h2>
 				<hr className='my-2' />
 				<p className='text-slate-500'>Saturday, 24 June 2023</p>
 				<p className='text-red-500 text-2xl text-center my-5'>
 					Not Enough Meal!
 				</p>
-				<div className='w-full h-fit overflow-hidden bg-gray-300'>
-					<div className=''>
-						<ProgressBar />
-					</div>
-					<div>{/* Calories */}</div>
-					<div>{/* Carbohidrate */}</div>
-					<div>{/* Protein */}</div>
-					<div>{/* Fat */}</div>
+				<div className='w-full h-fit overflow-hidden '>
+					<ProgressBar />
 				</div>
 			</div>
 
