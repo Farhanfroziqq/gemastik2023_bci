@@ -30,6 +30,7 @@ const FormLogin = () => {
 									className='w-full px-14 py-2 border rounded block text-small bg-transparent text-primary2  focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer'
 									id='user_name'
 									name='user_name'
+									placeholder='user@example.com'
 									required
 								/>
 							</div>
@@ -50,6 +51,7 @@ const FormLogin = () => {
 									className='w-full px-14 py-2 border rounded block text-small text-primary2 bg-transparent focus:outline-none focus:ring-primary1 focus:border-primary2 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer'
 									id='user_password'
 									name='user_password'
+									placeholder='• • • • •'
 									required
 								/>
 							</div>

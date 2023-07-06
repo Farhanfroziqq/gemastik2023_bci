@@ -114,7 +114,7 @@ const PersonalContact = () => {
 						for='user_weight'
 						className="block font-semibold mb-1 after:content-['*'] after:text-red-500 after:ml-0.5"
 					>
-						Weight (cm)
+						Weight (kg)
 					</label>
 					<input
 						type='number'

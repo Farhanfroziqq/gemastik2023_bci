@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 
 const ProgressBar = () => {
 	const [meal, setMeal] = useState({
-		calories: 1427,
-		protein: 23,
-		fat: 16,
-		carbohydrates: 235,
+		calories: 140,
+		protein: 100,
+		fat: 92,
+		carbohydrates: 91,
+		// calories: 0,
+		// protein: 0,
+		// fat: 0,
+		// carbohydrates: 0,
 	});
 
 	const [target, setTarget] = useState({

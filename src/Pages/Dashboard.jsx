@@ -5,7 +5,6 @@ import UserProfileButton from "../components/dashboard/UserProfileButton";
 import ReportButton from "../components/dashboard/ReportButton";
 import ReportModal from "../components/dashboard/ReportModal";
 import MealInputModal from "../components/dashboard/mealInput/MealInputModal";
-import ProgressBar from "../components/dashboard/ProgressBar";
 
 const Dashboard = () => {
 	const [profile, setProfile] = useState(false);
@@ -13,6 +12,7 @@ const Dashboard = () => {
 	const [mealInput, setMealInput] = useState(false);
 
 	const mealInputRef = useRef(null);
+
 	const handleProfile = () => {
 		setProfile(!profile);
 		if (!profile) {
@@ -39,6 +39,7 @@ const Dashboard = () => {
 			document.body.classList.remove("overflow-hidden");
 		}
 	};
+
 	useEffect(() => {
 		if (mealInput) {
 			mealInputRef.current.focus();
@@ -62,7 +63,7 @@ const Dashboard = () => {
 
 			{/* Profile Modal */}
 			<div
-				className={`absolute w-full h-screen backdrop-blur-sm z-50 ${
+				className={`fixed w-full h-screen backdrop-blur-sm z-50 ${
 					profile ? "block " : "hidden "
 				}`}
 			>
@@ -71,7 +72,7 @@ const Dashboard = () => {
 
 			{/* Report Modal */}
 			<div
-				className={`absolute w-full h-screen backdrop-blur-sm z-50 ${
+				className={`fixed w-full h-screen backdrop-blur-sm z-50 ${
 					report ? "block" : "hidden "
 				}`}
 			>
@@ -80,7 +81,7 @@ const Dashboard = () => {
 
 			{/* Meal Input Modal */}
 			<div
-				className={`absolute w-full h-screen backdrop-blur-sm z-50 ${
+				className={`fixed w-full h-screen backdrop-blur-sm z-50 ${
 					mealInput ? "block" : "hidden "
 				}`}
 			>

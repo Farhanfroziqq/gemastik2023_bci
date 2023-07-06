@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Account = () => {
 	const [inputValue, setInputValue] = useState({
@@ -24,9 +25,12 @@ const Account = () => {
 					<button className='button w-full rounded-md mb-2'>
 						Select Picture
 					</button>
-					<button className='button w-full rounded-md bg-red-600 hover:bg-red-700 text-white font-semibold'>
+					<Link
+						to='/login'
+						className='button text-center w-full rounded-md bg-red-600 hover:bg-red-700 text-white font-semibold'
+					>
 						Logout
-					</button>
+					</Link>
 				</div>
 			</div>
 			<div className='col-span-2'>
