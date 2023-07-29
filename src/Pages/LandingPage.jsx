@@ -1,9 +1,4 @@
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
-import Rooms from "../components/Rooms";
-import Offers from "../components/Offers";
-import Plan from "../components/Plan";
-import Footer from "../components/Footer";
+import { Hero, Navbar, Offers, Plan, Rooms, Footer } from "../components";
 
 function LandingPage() {
 	return (

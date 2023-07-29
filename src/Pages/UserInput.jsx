@@ -1,7 +1,7 @@
 import BackButton from "../components/BackButton";
 import Input from "../components/Input";
 
-const User_Input = () => {
+const UserInput = () => {
 	return (
 		<div className='flex flex-col px-4  lg:h-screen justify-center'>
 			<div className='my-4 lg:mx-40 xl:mx-56'>
@@ -14,4 +14,4 @@ const User_Input = () => {
 	);
 };
 
-export default User_Input;
+export default UserInput;

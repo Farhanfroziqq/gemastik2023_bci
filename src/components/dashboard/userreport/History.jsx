@@ -18,7 +18,7 @@ const History = () => {
 				</thead>
 				<tbody>
 					{history.map((hist, index) => (
-						<tr>
+						<tr key={hist.history_id}>
 							<td className='py-4 text-gray-400 select-none'>{index + 1}</td>
 							<td className='py-4'>{hist.total_calories}kcal</td>
 							<td className='py-4'>{hist.selected_meal}</td>

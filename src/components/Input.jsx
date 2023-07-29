@@ -1,4 +1,4 @@
-import PersonalContact from "./inputLogin/PersonalContact";
+import PersonalContact from "./InputLogin/PersonalContact";
 
 const Input = () => {
 	return (

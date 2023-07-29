@@ -1,12 +1,36 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Account = () => {
+	const navigate = useNavigate();
+
 	const [inputValue, setInputValue] = useState({
 		username: "fajarshiddiqqq",
 		email: "fajarshiddiqqq@gmail.com",
 		password: "",
 	});
+
+	const [token, setToken] = useState(null);
+
+	useEffect(() => {
+		const token = localStorage.getItem("token");
+		setToken(token);
+	}, []);
+
+	const apiLink = "http://127.0.0.1:8000/api/auth/logout?token=";
+	const headers = {
+		"Content-Type": "application/json",
+	};
+	const userLogout = async () => {
+		try {
+			const response = await axios.post(apiLink + token, { headers });
+			console.log(response);
+			navigate("/Login");
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
 	const handleInputChange = (e) => {
 		setInputValue(e.target.value);
@@ -15,22 +39,18 @@ const Account = () => {
 		<div className='grid grid-cols-3 gap-x-8 px-4'>
 			<div className='flex flex-col items-center '>
 				<div className='w-24 h-24 rounded-full flex items-center overflow-hidden cursor-pointer mb-3'>
-					<img
-						src='../../../public/img/default-profile.png'
-						className='scale-150'
-						alt=''
-					/>
+					<img src='img/default-profile.png' className='scale-150' alt='' />
 				</div>
 				<div className='flex items-center flex-col w-full my-4'>
 					<button className='button w-full rounded-md mb-2'>
 						Select Picture
 					</button>
-					<Link
-						to='/login'
+					<button
+						onClick={userLogout}
 						className='button text-center w-full rounded-md bg-red-600 hover:bg-red-700 text-white font-semibold'
 					>
 						Logout
-					</Link>
+					</button>
 				</div>
 			</div>
 			<div className='col-span-2'>

@@ -2,26 +2,17 @@ import React, { useState, useEffect } from "react";
 
 const ProgressBar = () => {
 	const [meal, setMeal] = useState({
-		calories: 140,
-		protein: 100,
-		fat: 92,
-		carbohydrates: 91,
-		// calories: 0,
-		// protein: 0,
-		// fat: 0,
-		// carbohydrates: 0,
+		calories: 0,
+		protein: 0,
+		fat: 0,
+		carbohydrates: 0,
 	});
 
-	const [target, setTarget] = useState({
-		calories: 2500,
-		protein: 50,
-		fat: 50,
-		carbohydrates: 600,
-	});
-
-	const handleChange = (event) => {
-		const { name, value } = event.target;
-		setMeal((prevMeal) => ({ ...prevMeal, [name]: value }));
+	const target = {
+		calories: 50,
+		protein: 0,
+		fat: 0,
+		carbohydrates: 0,
 	};
 
 	const calculatePercentage = (value, total) => {
@@ -38,7 +29,6 @@ const ProgressBar = () => {
 				<input
 					name='calories'
 					value={`${meal.calories} / ${target.calories} kcal`}
-					onChange={handleChange}
 					className='w-full py-1 px-2 rounded border-gray-300 bg-white'
 					disabled
 				/>
@@ -57,7 +47,6 @@ const ProgressBar = () => {
 				<input
 					name='protein'
 					value={`${meal.protein} / ${target.protein} g`}
-					onChange={handleChange}
 					className='w-full py-1 px-2 rounded border-gray-300 bg-white'
 					disabled
 				/>
@@ -76,7 +65,6 @@ const ProgressBar = () => {
 				<input
 					name='fat'
 					value={`${meal.fat} / ${target.fat} g`}
-					onChange={handleChange}
 					className='w-full py-1 px-2 rounded border-gray-300 bg-white'
 					disabled
 				/>
@@ -93,7 +81,6 @@ const ProgressBar = () => {
 				<input
 					name='carbohydrates'
 					value={`${meal.carbohydrates} / ${target.carbohydrates} g`}
-					onChange={handleChange}
 					className='w-full py-1 px-2 rounded border-gray-300 bg-white'
 					disabled
 				/>

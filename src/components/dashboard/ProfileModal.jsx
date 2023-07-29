@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineClose, AiOutlineEdit } from "react-icons/ai";
-import ProfileNav from "./userprofile/ProfileNav";
+import ProfileNav from "./UserProfile/ProfileNav";
 
 const ProfileModal = ({ props }) => {
 	return (

@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import Status from "../components/dashboard/Status";
-import ProfileModal from "../components/dashboard/ProfileModal";
-import UserProfileButton from "../components/dashboard/UserProfileButton";
-import ReportButton from "../components/dashboard/ReportButton";
-import ReportModal from "../components/dashboard/ReportModal";
-import MealInputModal from "../components/dashboard/mealInput/MealInputModal";
+import {
+	ProfileModal,
+	ReportButton,
+	ReportModal,
+	Status,
+	UserProfileButton,
+} from "../components/Dashboard";
+import MealInputModal from "../components/dashboard/MealInput/MealInputModal";
+import axios from "axios";
 
 const Dashboard = () => {
 	const [profile, setProfile] = useState(false);
@@ -12,6 +15,28 @@ const Dashboard = () => {
 	const [mealInput, setMealInput] = useState(false);
 
 	const mealInputRef = useRef(null);
+
+	const [token, setToken] = useState(null);
+
+	useEffect(() => {
+		const token = localStorage.getItem("token");
+		setToken(token);
+	}, []);
+
+	if (token) {
+		const apiLink = "http://127.0.0.1:8000/api/auth/me?token=";
+		const headers = {
+			"Content-Type": "application/json",
+		};
+		const userData = async () => {
+			try {
+				const response = await axios.post(apiLink + token, { headers });
+				console.log(response);
+			} catch (error) {
+				console.error("Error creating user:", error);
+			}
+		};
+	}
 
 	const handleProfile = () => {
 		setProfile(!profile);
